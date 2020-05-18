@@ -11,6 +11,7 @@ body {
 nav.navbar {
   position: absolute;
   padding-left: 350px;
+  z-index: 999;
 }
 
 nav.navbar #toggle {
@@ -33,10 +34,12 @@ nav.navbar #toggle div {
 
 nav.navbar #shirley-navbar-nav ul {
   font-size: 16px;
+  padding-left: 8px;
+  text-align: center;
 }
 
 nav.navbar #shirley-navbar-nav ul li a {
-  color: #939392;
+  color: white;
   letter-spacing: 1px;
 }
 
@@ -233,19 +236,61 @@ nav.navbar #shirley-navbar-nav ul li a {
   nav.navbar {
     padding-left: 30px;
   }
+  nav.navbar #shirley-navbar-nav {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  #bannerGroup #banner {
+    height: 37vh;
+  }
+  #bannerGroup #banner .lineGroup .top::before {
+    width: 115px;
+    left: -42px;
+    top: 30px;
+  }
+  #bannerGroup #banner .lineGroup .top::after {
+    width: 180px;
+    left: -52px;
+    top: 40px;
+  }
+  #bannerGroup #banner .lineGroup .bottom::before {
+    width: 115px;
+    left: -42px;
+    top: 92px;
+  }
+  #bannerGroup #banner .lineGroup .bottom::after {
+    width: 180px;
+    left: -52px;
+    top: 100px;
+  }
   #bannerGroup #banner .photo {
     width: 314px;
-    height: 414px;
-    bottom: -41px;
+    height: 374px;
+    bottom: -58px;
     left: 43%;
+    background-image: url("../img/shirley_photo_239.png");
   }
   #bannerGroup #banner .irregular {
-    width: 430px;
+    width: 390px;
+    height: 210px;
+    bottom: -78px;
+    background-image: url("../img/irregular_pink340.png");
+  }
+  #bannerGroup .wave {
+    height: 63vh;
   }
 }
 
 @media (max-width: 575px) {
+  nav.navbar {
+    padding-left: 6px;
+  }
+  #bannerGroup #banner {
+    height: 60vh;
+  }
   #bannerGroup #banner .photo {
+    width: 314px;
+    height: 334px;
+    bottom: -30px;
     left: 50%;
   }
   #bannerGroup #banner .irregular {

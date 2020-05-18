@@ -1,0 +1,278 @@
+@font-face {
+  font-family: 'jf-bubble';
+  src: url("../fonts/jf-openhuninn-1.1/jf-openhuninn-1.1.ttf");
+}
+
+body {
+  background-color: #F7F1D7 !important;
+  font-family: 'jf-bubble' !important;
+}
+
+nav.navbar {
+  position: absolute;
+  padding-left: 350px;
+}
+
+nav.navbar #toggle {
+  width: 28px;
+  height: 30px;
+  margin: 10px 25px;
+  display: none;
+}
+
+nav.navbar #toggle div {
+  width: 100%;
+  height: 5px;
+  background: #DB6C5A;
+  margin: 4px auto;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+nav.navbar #shirley-navbar-nav ul {
+  font-size: 16px;
+}
+
+nav.navbar #shirley-navbar-nav ul li a {
+  color: #939392;
+  letter-spacing: 1px;
+}
+
+#toggle.on .one {
+  -webkit-transform: rotate(45deg) translate(5px, 5px);
+          transform: rotate(45deg) translate(5px, 5px);
+}
+
+#toggle.on .two {
+  opacity: 0;
+}
+
+#toggle.on .three {
+  -webkit-transform: rotate(-45deg) translate(7px, -8px);
+          transform: rotate(-45deg) translate(7px, -8px);
+}
+
+#banner {
+  height: 50vh;
+  padding-top: 54px;
+}
+
+#banner .aboutme .text {
+  margin: 45px 0px;
+  font-size: 1.5rem;
+}
+
+#banner .lineGroup .top {
+  width: 100%;
+  height: 100%;
+}
+
+#banner .lineGroup .top::before {
+  content: '';
+  position: absolute;
+  width: 185px;
+  height: 3px;
+  background-color: #DB6C5A;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  left: 10px;
+  top: 50px;
+}
+
+#banner .lineGroup .top::after {
+  content: '';
+  position: absolute;
+  width: 260px;
+  height: 3px;
+  background-color: #DB6C5A;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  left: -10px;
+  top: 65px;
+}
+
+#banner .lineGroup .bottom {
+  width: 100%;
+  height: 100%;
+}
+
+#banner .lineGroup .bottom::before {
+  content: '';
+  position: absolute;
+  width: 174px;
+  height: 3px;
+  background-color: #DB6C5A;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  left: 10px;
+  top: 120px;
+}
+
+#banner .lineGroup .bottom::after {
+  content: '';
+  position: absolute;
+  width: 250px;
+  height: 3px;
+  background-color: #DB6C5A;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  left: 23px;
+  top: 102px;
+}
+
+#banner .photo {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: -31px;
+  width: 404px;
+  height: 454px;
+  background-color: #ACB767;
+  background-image: url("../img/shirley_photo.png");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  z-index: 99;
+}
+
+#banner .irregular {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 452px;
+  height: 280px;
+  bottom: -73px;
+  background-image: url("../img/irregular_pink.png");
+  background-repeat: no-repeat;
+  z-index: 9;
+}
+
+#banner .shirley {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  position: absolute;
+  z-index: 399;
+}
+
+#banner .shirley .shirley_line text {
+  stroke-dasharray: 700;
+  stroke-dashoffset: 500;
+  -webkit-animation: dash 5s linear forwards;
+          animation: dash 5s linear forwards;
+}
+
+.wave {
+  position: relative;
+  height: 50vh;
+}
+
+.wave path {
+  fill: #707A56;
+}
+
+.wave .resume {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  text-align: center;
+  color: #F7F1D7;
+}
+
+.wave .resume .title {
+  margin: 45px 0px;
+}
+
+.wave .resume .btn {
+  width: 160px;
+  height: 50px;
+  display: inline-block;
+  background-color: #DC8B7A;
+  margin: 45px 0px;
+}
+
+.wave .resume .btn a {
+  text-decoration: none;
+  color: #F7F1D7;
+  font-size: 1.5rem;
+}
+
+@media (max-width: 1200px) {
+  nav.navbar {
+    padding-left: 100px;
+  }
+  #bannerGroup #banner .aboutme h2 {
+    font-size: 1.5rem;
+  }
+  #bannerGroup #banner .aboutme .text {
+    font-size: unset;
+  }
+  #bannerGroup #banner .photo {
+    width: 344px;
+    height: 414px;
+  }
+  #bannerGroup #banner .irregular {
+    width: 380px;
+    height: 240px;
+    bottom: -73px;
+    background-image: url("../img/irregular_pink380.png");
+  }
+}
+
+@media (max-width: 991px) {
+  nav.navbar #toggle {
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  nav.navbar {
+    padding-left: 30px;
+  }
+  #bannerGroup #banner .photo {
+    width: 314px;
+    height: 414px;
+    bottom: -41px;
+    left: 43%;
+  }
+  #bannerGroup #banner .irregular {
+    width: 430px;
+  }
+}
+
+@media (max-width: 575px) {
+  #bannerGroup #banner .photo {
+    left: 50%;
+  }
+  #bannerGroup #banner .irregular {
+    width: 380px;
+  }
+  .wave {
+    bottom: -330px;
+  }
+}
+
+@-webkit-keyframes dash {
+  from {
+    opacity: 0;
+  }
+  to {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes dash {
+  from {
+    opacity: 0;
+  }
+  to {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+}
+/*# sourceMappingURL=index.css.map */

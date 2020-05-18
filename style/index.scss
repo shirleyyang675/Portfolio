@@ -1,0 +1,372 @@
+$backgroud_color:#F7F1D7;
+$title_color:#DC8B7A;
+$matcha_color:#707A56;
+$text_grey:#939392;
+$text_lightyellow:#F7F1D7;
+$photo_highlight:#ACB767;
+$deep_green:#273E36;
+
+$section_padding:90px 0px;
+$title_margin:45px 0px;
+$context_margin:22px 0px;
+
+$font_size_context:1rem; //16px
+$font_size_title:1.5rem; //24px
+$font_size_special:2rem; //32px
+
+$letter_space:1px;
+
+@font-face {
+    font-family: 'jf-bubble';
+    src: url('../fonts/jf-openhuninn-1.1/jf-openhuninn-1.1.ttf');
+}
+
+
+body{
+    background-color: $backgroud_color !important;
+    font-family: 'jf-bubble' !important;   
+}
+
+//<!-- ========== header ========== -->
+// navtoggle（從codepen複製的）
+nav.navbar{
+    position:absolute;
+    padding-left: 350px;
+
+    #toggle {
+        width: 28px;
+        height: 30px;
+        margin: 10px 25px;
+        display: none;
+
+        div {
+            width: 100%;
+            height: 5px;
+            background: #DB6C5A;
+            margin: 4px auto;
+            transition: all 0.3s;
+            backface-visibility: hidden;
+        }
+    }
+
+    #shirley-navbar-nav{
+
+        ul{ 
+            font-size: 16px;
+    
+            li{
+    
+                a{
+                 color: $text_grey;
+                 letter-spacing: $letter_space;
+                }
+            }
+        }
+    }
+
+}
+
+ 
+  #toggle.on .one {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  
+  #toggle.on .two {
+    opacity: 0;
+  }
+  
+  #toggle.on .three {
+    transform: rotate(-45deg) translate(7px, -8px);
+  }
+
+// 結束navtoggle複製
+
+    #banner{
+        height: 50vh;
+        padding-top: 54px;
+
+        .aboutme{
+
+            .text{
+                margin:$title_margin ;
+                font-size: $font_size_title;
+            }
+        }
+
+        .lineGroup{
+
+            .top{
+                width: 100%;
+                height: 100%;
+                
+                &::before{
+                    content: '';
+                    position: absolute;
+                    width: 185px;
+                    height: 3px;
+                    background-color: #DB6C5A;
+                    transform: rotate(-45deg);
+                    left: 10px;
+                    top: 50px;
+                    // animation: lines 5s linear;
+    
+                }
+    
+                &::after{
+                    content: '';
+                    position: absolute;
+                    width: 260px;
+                    height: 3px;
+                    background-color: #DB6C5A;
+                    transform: rotate(-45deg);
+                    left: -10px;
+                    top: 65px;
+                }
+            }
+    
+            .bottom{
+                width: 100%;
+                height: 100%;
+                
+                &::before{
+                    content: '';
+                    position: absolute;
+                    width: 174px;
+                    height: 3px;
+                    background-color: #DB6C5A;
+                    transform: rotate(-45deg);
+                    left: 10px;
+                    top: 120px;
+    
+                }
+    
+                &::after{
+                    content: '';
+                    position: absolute;
+                    width: 250px;
+                    height: 3px;
+                    background-color: #DB6C5A;
+                    transform: rotate(-45deg);
+                    left: 23px;
+                    top: 102px;
+                }
+            }
+        }
+
+        .photo{
+            position: absolute;
+            // width: 50%;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -31px;
+
+            width: 404px;
+            height: 454px;
+            background-color: $photo_highlight;
+            background-image: url('../img/shirley_photo.png');
+            background-repeat: no-repeat;
+            background-position: bottom;
+            z-index: 99;
+
+            // img{
+            //     width: 100%;
+            // }
+        }
+
+        .irregular{
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 452px;
+            height: 280px;
+            bottom: -73px;
+            background-image: url('../img/irregular_pink.png');
+            background-repeat: no-repeat;
+            z-index: 9;
+        }
+
+        .shirley{
+            transform: rotate(90deg);
+            position: absolute;
+            z-index: 399;
+
+            .shirley_line{
+
+                text{
+                stroke-dasharray: 700;
+                stroke-dashoffset: 500;
+                animation: dash 5s linear forwards;
+                // animation-delay:.5s;
+            }
+              }
+          }
+
+           
+
+          }    
+        
+    
+
+    .wave{
+        position: relative;
+        height: 50vh;
+
+        path{
+            fill:$matcha_color;
+        }
+
+        .resume{
+
+            position: absolute;
+            top: 25%;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            color: $text_lightyellow;
+
+            .title{
+                margin: $title_margin;
+            }
+
+            .btn{
+                width: 160px;
+                height: 50px;
+                display: inline-block;
+                background-color: $title_color;
+                margin:$title_margin;
+                // line-height: 50px;
+            
+                
+                a{
+                    text-decoration: none;
+                    color: $text_lightyellow;
+                    font-size: $font_size_title;
+
+                
+                }
+            }
+
+        }
+    }
+    
+   
+      
+// navbar 熒幕寬度991以下時出現toggle
+
+
+@media (max-width:1200px){
+
+    nav.navbar{
+        padding-left: 100px;
+    }
+
+    #bannerGroup{
+    #banner{
+        .aboutme{
+            h2{
+                font-size:$font_size_title;
+            }
+            .text{
+                font-size: unset;
+            }
+        }
+
+        .photo {
+            width: 344px;
+            height: 414px;
+        }
+
+        .irregular{
+            width: 380px;
+            height: 240px;
+            bottom: -73px;
+            background-image: url('../img/irregular_pink380.png');
+        }
+
+    }
+
+    
+}
+}
+
+@media (max-width:991px){
+    // header{
+        nav.navbar{
+
+            #toggle{
+                display: block;
+            }
+    }
+    // }
+
+}
+
+@media (max-width:768px){
+    nav.navbar {
+        padding-left: 30px;
+    }
+
+    #bannerGroup{
+        #banner{
+            .photo{
+                width: 314px;
+                height: 414px;
+                bottom: -41px;
+                left: 43%;
+            }
+
+            .irregular{
+                width: 430px;
+            }
+
+        }
+
+        
+    }
+}
+
+@media (max-width:575px){
+    // nav.navbar {
+    //     padding-left: 30px;
+    // }
+
+    #bannerGroup{
+        #banner{
+            .photo{
+                // width: 314px;
+                // height: 414px;
+                // bottom: -41px;
+                left: 50%;
+            }
+
+            .irregular{
+                width: 380px;
+            }
+
+        }
+
+        
+    }
+
+    .wave{
+        bottom: -330px;
+    }
+    }
+
+
+
+@keyframes dash {
+    from{
+        opacity: 0;
+    }
+    to {
+      stroke-dashoffset: 0;
+      opacity: 1;
+    }
+  }
+
+//   @keyframes lines{
+//     from{width: 0;}
+//     to{width: 1;}
+//   }
+//<-- End header -->

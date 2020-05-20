@@ -6,15 +6,21 @@ $text_lightyellow:#F7F1D7;
 $photo_highlight:#ACB767;
 $deep_green:#273E36;
 
-$section_padding:90px 0px;
-$title_margin:45px 0px;
-$context_margin:22px 0px;
-
 $font_size_context:1rem; //16px
 $font_size_title:1.5rem; //24px
 $font_size_special:2rem; //32px
 
 $letter_space:1px;
+
+$baseLineHeight:22px;
+//（未看Alex scss教學前的寫法）以下用function統一處理，請看變數baseLineHeight 以及function line函數
+// $section_padding:90px 0px; 改爲頂天立地88px  --> line(3)
+// $title_margin:45px 0px;    改爲標題距離44px  --> line(2)
+// $context_margin:22px 0px;  改爲内文距離22px  --> line(1)
+
+@function line($count:1){
+    @return $baseLineHeight * $count
+}
 
 @font-face {
     font-family: 'jf-bubble';
@@ -91,7 +97,7 @@ nav.navbar{
         .aboutme{
 
             .text{
-                margin:$title_margin ;
+                margin:line(2) 0px ;
                 font-size: $font_size_title;
             }
         }
@@ -228,7 +234,7 @@ nav.navbar{
             color: $text_lightyellow;
 
             .title{
-                margin: $title_margin;
+                margin: line(2) 0px;
             }
 
             .btn{
@@ -236,7 +242,7 @@ nav.navbar{
                 height: 50px;
                 display: inline-block;
                 background-color: $title_color;
-                margin:$title_margin;
+                margin:line(2) 0px;
                 // line-height: 50px;
             
                 
@@ -380,18 +386,38 @@ nav.navbar{
     #bannerGroup{
         #banner{
             height: 60vh;
+            padding-top: 74px;
 
             .photo{
                 width: 314px;
-                height: 334px;
-                bottom: -30px;
+                height: 324px;
+                // bottom: -30px;
                 left: 50%;
+                top: 0;
             }
 
             .irregular{
                 width: 380px;
             }
 
+        }
+
+        .wave{
+            .resume{
+                top: 21%;
+
+                h2{
+                    font-size: $font_size_title;
+                }
+                .btn{
+                    width: 130px;
+                    height: 40px;
+
+                    a{
+                        font-size: $font_size_context;
+                    }
+                }
+            }
         }
 
         
@@ -401,6 +427,10 @@ nav.navbar{
         bottom: -330px;
     }
     }
+
+@media (max-width:320px){
+    
+}
 
 
 

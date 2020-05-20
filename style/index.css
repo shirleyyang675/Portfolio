@@ -63,7 +63,7 @@ nav.navbar #shirley-navbar-nav ul li a {
 }
 
 #banner .aboutme .text {
-  margin: 45px 0px;
+  margin: 44px 0px;
   font-size: 1.5rem;
 }
 
@@ -187,7 +187,7 @@ nav.navbar #shirley-navbar-nav ul li a {
 }
 
 .wave .resume .title {
-  margin: 45px 0px;
+  margin: 44px 0px;
 }
 
 .wave .resume .btn {
@@ -195,7 +195,7 @@ nav.navbar #shirley-navbar-nav ul li a {
   height: 50px;
   display: inline-block;
   background-color: #DC8B7A;
-  margin: 45px 0px;
+  margin: 44px 0px;
 }
 
 .wave .resume .btn a {
@@ -286,15 +286,29 @@ nav.navbar #shirley-navbar-nav ul li a {
   }
   #bannerGroup #banner {
     height: 60vh;
+    padding-top: 74px;
   }
   #bannerGroup #banner .photo {
     width: 314px;
-    height: 334px;
-    bottom: -30px;
+    height: 324px;
     left: 50%;
+    top: 0;
   }
   #bannerGroup #banner .irregular {
     width: 380px;
+  }
+  #bannerGroup .wave .resume {
+    top: 21%;
+  }
+  #bannerGroup .wave .resume h2 {
+    font-size: 1.5rem;
+  }
+  #bannerGroup .wave .resume .btn {
+    width: 130px;
+    height: 40px;
+  }
+  #bannerGroup .wave .resume .btn a {
+    font-size: 1rem;
   }
   .wave {
     bottom: -330px;

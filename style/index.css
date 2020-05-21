@@ -1,3 +1,7 @@
+nav.navbar #header .nav-menu ul li a {
+  text-decoration: none;
+}
+
 @font-face {
   font-family: 'jf-bubble';
   src: url("../fonts/jf-openhuninn-1.1/jf-openhuninn-1.1.ttf");
@@ -9,9 +13,10 @@ body {
 }
 
 nav.navbar {
-  position: absolute;
+  position: fixed;
   padding-left: 350px;
   z-index: 999;
+  right: 0;
 }
 
 nav.navbar #toggle {
@@ -32,15 +37,54 @@ nav.navbar #toggle div {
           backface-visibility: hidden;
 }
 
-nav.navbar #shirley-navbar-nav ul {
-  font-size: 16px;
-  padding-left: 8px;
-  text-align: center;
+nav.navbar #header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 9997;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  padding: 15px;
+  overflow-y: auto;
 }
 
-nav.navbar #shirley-navbar-nav ul li a {
-  color: white;
-  letter-spacing: 1px;
+nav.navbar #header .nav-menu ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav.navbar #header .nav-menu ul li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #45505b;
+  padding: 10px 18px;
+  margin-bottom: 8px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  font-size: 15px;
+  border-radius: 50px;
+  background: #f2f3f5;
+  height: 56px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+nav.navbar #header.active {
+  left: 0;
+}
+
+nav.navbar #header .nav-menu a:hover, nav.navbar #header .nav-menu .active > a, nav.navbar #header .nav-menu li:hover > a {
+  color: #fff;
+  background: #0563bb;
 }
 
 #toggle.on .one {
@@ -229,6 +273,13 @@ nav.navbar #shirley-navbar-nav ul li a {
 @media (max-width: 991px) {
   nav.navbar #toggle {
     display: block;
+    z-index: 9999;
+  }
+  nav.navbar #header {
+    width: 100%;
+    background: #fff;
+    border-right: 1px solid #e6e9ec;
+    left: -100%;
   }
 }
 

@@ -15,7 +15,7 @@
     <!-- ========== header ========== -->
 
      <!-- navbar -->
-    <header>
+    <header id="navGroup">
     <nav class="navbar navbar-expand-lg">
       <div class="container">           
 
@@ -24,8 +24,39 @@
             <div class="two"></div>
             <div class="three"></div>
           </div>
+
+        <div id="header" class="d-flex flex-column justify-content-center">
+          <div class="nav-menu">
+            <ul>
+              <li>
+                <a href="#navGroup">關於雪莉</a>
+              </li>
+              <li>
+                <a href="#abc">平面設計</a>
+              </li>
+              <li>
+                <a href="">程式切版</a>
+              </li>
+              <li>
+                <a href="">影片剪輯</a>
+              </li>
+              <li>
+                <a href="">樂於分享</a>
+              </li>
+              <li>
+                <a href="">一些習慣</a>
+              </li>
+              <li>
+                <a href="">未來目標</a>
+              </li>
+              <li>
+                <a href="">該面試了</a>
+              </li>
+            </ul>
+          </div>
+        </div>  
     
-        <div class="collapse navbar-collapse" id="shirley-navbar-nav">
+        <!-- <div class="collapse navbar-collapse" id="shirley-navbar-nav">
           <ul class="navbar-nav mr-auto">
           
             <li class="nav-item">
@@ -55,7 +86,7 @@
           
           
           </ul>
-        </div>
+        </div> -->
 
       </div>
     </nav>
@@ -143,7 +174,37 @@
 //navbar按鈕效果（來自codepen）
 $("#toggle").click(function() {
   $(this).toggleClass("on");
+  //以下自己加的
+  clearAllactive ()  //清楚全部active
+  $('#header').toggleClass('active')
+
+ 
 });
+
+//點擊header后，讓nav-menu消失在視野中
+$('#header').click( function (){
+$(this).removeClass('active')
+});
+
+
+
+
+//複製w3c的 closest中的範例
+$( document ).on("click", function( e ) {
+    clearAllactive ()
+    $( e.target ).closest("li").addClass("active");
+  });
+
+//清除全部的active
+  function clearAllactive (){
+    $('#header li').removeClass("active");
+  }
+
+
+
+
+
+
 </script>
 </body>
 </html>

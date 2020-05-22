@@ -37,7 +37,7 @@ body{
     font-family: 'jf-bubble' !important;   
 }
 
-//<!-- ========== header ========== -->
+//<!-- ========== navGroup + bannerGroup ========== -->
 // navtoggle（從codepen複製的）
 nav.navbar{
     position:fixed;
@@ -282,8 +282,6 @@ nav.navbar{
 
           }    
         
-    
-
     .wave{
         position: relative;
         height: 50vh;
@@ -461,6 +459,7 @@ nav.navbar{
     }
 
     #bannerGroup{
+        height: 180vh;
         #banner{
             height: 60vh;
             padding-top: 74px;
@@ -506,7 +505,18 @@ nav.navbar{
     }
 
 @media (max-width:320px){
-    
+     
+    #bannerGroup{
+        height: 210vh;
+        
+        #banner{
+            height: 76vh;
+        }
+
+        .wave {
+            height: 74vh;
+        }
+    }
 }
 
 
@@ -521,8 +531,86 @@ nav.navbar{
     }
   }
 
-//   @keyframes lines{
-//     from{width: 0;}
-//     to{width: 1;}
-//   }
-//<-- End header -->
+//<-- End navGroup + bannerGroup -->
+
+//<!-- ========== Portfolio ========== -->
+#Portfolio{
+    position: relative;
+    .leaves{
+        position: absolute;
+        left: -15%;
+    }
+
+    div{
+        iframe{
+            width: 100%; 
+            height: 700px;
+        }
+    }
+}
+
+@media (max-width:768px){
+    #Portfolio{
+        .leaves{
+            left: -44%;
+        }
+
+        div{
+            iframe{
+                width: 100%; 
+                height: 600px;
+            }
+        }
+    }
+}
+
+@media(max-width:768px){
+    #Portfolio{
+
+        .leaves {
+            width: 350px;
+            top: -3px;
+            left: -187px;
+
+            img{
+                width: 100%;
+            }
+        }
+
+        div{
+            iframe{
+                height: 700px;
+            }
+        }
+    }
+}
+
+@media (max-width:576px){
+    #Portfolio{
+
+        .leaves {
+            width: 200px;
+            left: -30%;
+            top: -53px;
+        }
+
+        div{
+            iframe{
+                height: 330px;
+            }
+        }
+    }   
+}
+
+@media (max-width:320px){
+    #Portfolio{
+
+        .leaves{
+            width: 161px;
+            left: -27%;
+            top: 0px;
+        }
+    }
+}
+//<-- End Portfolio -->
+

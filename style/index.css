@@ -1,4 +1,4 @@
-nav.navbar #header .nav-menu ul li a {
+nav.navbar #header .nav-menu ul li a, #BighomeWebsite .text .clickBtn a {
   text-decoration: none;
 }
 
@@ -14,7 +14,6 @@ body {
 
 nav.navbar {
   position: fixed;
-  padding-left: 350px;
   z-index: 999;
   right: 0;
 }
@@ -402,12 +401,17 @@ nav.navbar #header .nav-menu a:hover, nav.navbar #header .nav-menu .active > a, 
 }
 
 #Portfolio {
+  padding: 66px 0px;
   position: relative;
 }
 
 #Portfolio .leaves {
   position: absolute;
-  left: -15%;
+  left: 0;
+}
+
+#Portfolio .leaves img {
+  width: 100%;
 }
 
 #Portfolio div iframe {
@@ -416,23 +420,12 @@ nav.navbar #header .nav-menu a:hover, nav.navbar #header .nav-menu .active > a, 
 }
 
 @media (max-width: 768px) {
-  #Portfolio .leaves {
-    left: -44%;
+  #Portfolio {
+    padding: 44px 0px;
   }
-  #Portfolio div iframe {
-    width: 100%;
-    height: 600px;
-  }
-}
-
-@media (max-width: 768px) {
   #Portfolio .leaves {
-    width: 350px;
+    width: 140px;
     top: -3px;
-    left: -187px;
-  }
-  #Portfolio .leaves img {
-    width: 100%;
   }
   #Portfolio div iframe {
     height: 700px;
@@ -441,9 +434,8 @@ nav.navbar #header .nav-menu a:hover, nav.navbar #header .nav-menu .active > a, 
 
 @media (max-width: 576px) {
   #Portfolio .leaves {
-    width: 200px;
-    left: -30%;
-    top: -53px;
+    width: 80px;
+    top: -43px;
   }
   #Portfolio div iframe {
     height: 330px;
@@ -452,9 +444,273 @@ nav.navbar #header .nav-menu a:hover, nav.navbar #header .nav-menu .active > a, 
 
 @media (max-width: 320px) {
   #Portfolio .leaves {
-    width: 161px;
-    left: -27%;
+    width: 81px;
     top: 0px;
   }
+}
+
+#BighomeWebsite {
+  padding: 66px 0px;
+  color: #707A56;
+  position: relative;
+}
+
+#BighomeWebsite .leaves {
+  width: 400px;
+  position: absolute;
+  top: -12%;
+  right: 0;
+}
+
+#BighomeWebsite .leaves img {
+  width: 100%;
+}
+
+#BighomeWebsite .mockUp {
+  width: 770px;
+  margin: 0 auto;
+}
+
+#BighomeWebsite .mockUp img {
+  width: 100%;
+}
+
+#BighomeWebsite .text h4 {
+  font-size: 1rem;
+  text-align: center;
+}
+
+#BighomeWebsite .text .background {
+  position: relative;
+  z-index: 1;
+}
+
+#BighomeWebsite .text .background::before {
+  content: '';
+  position: absolute;
+  /* positioning must be absolute here, and relative positioning must be applied to the parent */
+  width: 33%;
+  border-top: 1px solid #273E36;
+  top: 50%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto;
+  /* this centers the line to the full width specified */
+  z-index: -1;
+}
+
+#BighomeWebsite .text .background span {
+  /* to hide the lines from behind the text, you have to set the background color the same as the container */
+  background: #F7F1D7;
+  padding: 0 35px;
+}
+
+#BighomeWebsite .text .title {
+  width: 200px;
+  line-height: 35px;
+  background-color: #DC8B7A;
+  -webkit-box-shadow: 5px 5px #939392;
+          box-shadow: 5px 5px #939392;
+  margin: 44px auto;
+  text-align: center;
+  font-size: 1.5rem;
+  color: white;
+}
+
+#BighomeWebsite .text p {
+  text-align: center;
+}
+
+#BighomeWebsite .text .QRcode {
+  width: 100px;
+  margin: 44px auto;
+}
+
+#BighomeWebsite .text .QRcode img {
+  width: 100%;
+}
+
+#BighomeWebsite .text .clickBtn {
+  position: relative;
+  z-index: 1;
+}
+
+#BighomeWebsite .text .clickBtn::before {
+  content: '';
+  position: absolute;
+  width: 33%;
+  border-top: 1px solid #273E36;
+  z-index: -1;
+  top: 50%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+#BighomeWebsite .text .clickBtn a {
+  background: #F7F1D7;
+  padding: 0 35px;
+  position: relative;
+  color: #707A56;
+}
+
+#BighomeWebsite .text .clickBtn a::after {
+  content: '';
+  position: absolute;
+  width: 95px;
+  height: 30px;
+  top: -15%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  /* left: 0; */
+  border: 1px solid #707A56;
+}
+
+@media (max-width: 768px) {
+  #BighomeWebsite {
+    padding: 44px 0px;
+  }
+  #BighomeWebsite .leaves {
+    width: 290px;
+    top: -9%;
+  }
+  #BighomeWebsite .text .title {
+    width: 220px;
+    line-height: 47px;
+  }
+  #BighomeWebsite .text .background::before {
+    width: 80%;
+  }
+  #BighomeWebsite .text .clickBtn::before {
+    width: 80%;
+  }
+}
+
+@media (max-width: 575px) {
+  #BighomeWebsite .leaves {
+    width: 160px;
+    top: -9%;
+  }
+  #BighomeWebsite .mockUp {
+    width: 370px;
+  }
+  #BighomeWebsite .text .background span {
+    padding: 0 25px;
+  }
+}
+
+@media (max-width: 320px) {
+  #BighomeWebsite .mockUp {
+    width: 320px;
+  }
+  #BighomeWebsite .leaves {
+    width: 140px;
+    top: -7%;
+  }
+}
+
+#vedioGroup {
+  padding: 66px 0px;
+  color: #707A56;
+  font-size: 1.5rem;
+  text-align: center;
+  position: relative;
+}
+
+#vedioGroup .title {
+  width: 346px;
+  line-height: 47px;
+  background-color: #DC8B7A;
+  -webkit-box-shadow: 5px 5px #939392;
+          box-shadow: 5px 5px #939392;
+  margin: 22px 0;
+  color: white;
+}
+
+#vedioGroup iframe {
+  width: 450px;
+  height: 320px;
+}
+
+#vedioGroup .leaves {
+  width: 280px;
+  position: absolute;
+  left: 0;
+  bottom: -320px;
+}
+
+#vedioGroup .leaves img {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  #vedioGroup {
+    padding: 44px 0px;
+  }
+  #vedioGroup .title {
+    width: 226px;
+    line-height: 38px;
+    margin: 0 auto 40px auto;
+  }
+  #vedioGroup iframe {
+    width: 350px;
+  }
+}
+
+@media (max-width: 576px) {
+  #vedioGroup p {
+    font-size: 1rem;
+  }
+  #vedioGroup iframe {
+    width: 340px;
+    height: 230px;
+  }
+}
+
+@media (max-width: 320px) {
+  #vedioGroup iframe {
+    width: 290px;
+    height: 200px;
+  }
+}
+
+#habbits {
+  padding: 66px 0px;
+  background-color: #707A56;
+}
+
+#habbits .myArticle {
+  width: 200px;
+}
+
+#habbits .myArticle img {
+  width: 100%;
+}
+
+#habbits .myArticle h4 {
+  text-align: center;
+  position: relative;
+  color: white;
+  z-index: 1;
+}
+
+#habbits .myArticle h4::before {
+  content: '';
+  position: absolute;
+  border-top: 1px solid white;
+  top: 50%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+#habbits .myArticle h4 span {
+  width: 100px;
+  padding: 0 14px;
+  background-color: #707A56;
 }
 /*# sourceMappingURL=index.css.map */

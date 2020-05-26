@@ -80,6 +80,7 @@ nav.navbar #header .nav-menu ul li a {
   height: 56px;
   overflow: hidden;
   transition: 0.3s;
+  letter-spacing: 2px;
 }
 
 nav.navbar #header.active {
@@ -113,6 +114,14 @@ nav.navbar #header .nav-menu a:hover, nav.navbar #header .nav-menu .active > a, 
 #banner .aboutme .text {
   margin: 44px 0px;
   font-size: 1.5rem;
+  color: grey;
+  letter-spacing: 1px;
+  line-height: 57px;
+  text-align: justify;
+}
+
+#banner .aboutme .text p {
+  padding-right: 1rem;
 }
 
 #banner .lineGroup .top {
@@ -232,6 +241,7 @@ nav.navbar #header .nav-menu a:hover, nav.navbar #header .nav-menu .active > a, 
           transform: translateX(-50%);
   text-align: center;
   color: #F7F1D7;
+  letter-spacing: 2px;
 }
 
 .wave .resume .title {
@@ -281,7 +291,7 @@ nav.navbar #header .nav-menu a:hover, nav.navbar #header .nav-menu .active > a, 
   }
   nav.navbar #header {
     width: 100%;
-    background: #fff;
+    background: #F7F1D7;
     border-right: 1px solid #e6e9ec;
     left: -100%;
   }
@@ -296,6 +306,10 @@ nav.navbar #header .nav-menu a:hover, nav.navbar #header .nav-menu .active > a, 
   }
   #bannerGroup #banner {
     height: 37vh;
+  }
+  #bannerGroup #banner .aboutme .text {
+    letter-spacing: 1px;
+    line-height: 40px;
   }
   #bannerGroup #banner .lineGroup .top::before {
     width: 115px;
@@ -345,6 +359,12 @@ nav.navbar #header .nav-menu a:hover, nav.navbar #header .nav-menu .active > a, 
   #bannerGroup #banner {
     height: 60vh;
     padding-top: 74px;
+  }
+  #bannerGroup #banner .aboutme {
+    padding: 0 15px;
+  }
+  #bannerGroup #banner .aboutme p {
+    padding-right: unset;
   }
   #bannerGroup #banner .photo {
     width: 314px;
@@ -524,7 +544,11 @@ nav.navbar #header .nav-menu a:hover, nav.navbar #header .nav-menu .active > a, 
 }
 
 #BighomeWebsite .text p {
-  text-align: center;
+  width: 431px;
+  margin: auto;
+  text-align: justify;
+  line-height: 35px;
+  letter-spacing: 2px;
 }
 
 #BighomeWebsite .text .QRcode {
@@ -605,6 +629,11 @@ nav.navbar #header .nav-menu a:hover, nav.navbar #header .nav-menu .active > a, 
   #BighomeWebsite .text .background span {
     padding: 0 25px;
   }
+  #BighomeWebsite .text p {
+    width: 301px;
+    line-height: 35px;
+    letter-spacing: 2px;
+  }
 }
 
 @media (max-width: 320px) {
@@ -614,6 +643,10 @@ nav.navbar #header .nav-menu a:hover, nav.navbar #header .nav-menu .active > a, 
   #BighomeWebsite .leaves {
     width: 140px;
     top: -7%;
+  }
+  #BighomeWebsite .text p {
+    width: 270px;
+    letter-spacing: 1px;
   }
 }
 
@@ -752,6 +785,9 @@ nav.navbar #header .nav-menu a:hover, nav.navbar #header .nav-menu .active > a, 
 
 #habbits p {
   color: #F7F1D7;
+  width: 410px;
+  line-height: 35px;
+  letter-spacing: 2px;
 }
 
 #habbits .little-title {
@@ -804,6 +840,10 @@ nav.navbar #header .nav-menu a:hover, nav.navbar #header .nav-menu .active > a, 
   }
   #habbits .myArticle {
     width: 140px;
+  }
+  #habbits p {
+    width: 265px;
+    letter-spacing: 1px;
   }
 }
 
@@ -1107,7 +1147,7 @@ nav.navbar #header .nav-menu a:hover, nav.navbar #header .nav-menu .active > a, 
 }
 
 #footer ::-webkit-input-placeholder {
-  color: #F7F1D7;
+  color: grey;
 }
 
 #footer .leaves-l {
@@ -1178,8 +1218,7 @@ nav.navbar #header .nav-menu a:hover, nav.navbar #header .nav-menu .active > a, 
   width: 140px;
   padding: 10px;
   border-radius: 10px;
-  background-color: #273E36;
-  border: 1px solid #F7F1D7;
+  background-color: #DB6C5A;
   color: #F7F1D7;
 }
 

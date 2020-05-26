@@ -116,6 +116,7 @@ nav.navbar{
                         // width: 100%;
                         overflow: hidden;
                         transition: 0.3s;
+                        letter-spacing: 2px;
                     }
 
                     // &.active{
@@ -172,6 +173,14 @@ nav.navbar{
             .text{
                 margin:line(2) 0px ;
                 font-size: $font_size_title;
+                color: grey;
+                letter-spacing: 1px;
+                line-height: 57px;
+                text-align: justify;
+
+                p{
+                    padding-right: 1rem;
+                }
             }
         }
 
@@ -303,6 +312,7 @@ nav.navbar{
             transform: translateX(-50%);
             text-align: center;
             color: $text_lightyellow;
+            letter-spacing: 2px;
 
             .title{
                 margin: line(2) 0px;
@@ -348,6 +358,7 @@ nav.navbar{
             }
             .text{
                 font-size: unset;
+                
             }
         }
 
@@ -380,7 +391,7 @@ nav.navbar{
 
             #header {
                 width: 100%;
-                background: #fff;
+                background: $backgroud_color;
                 border-right: 1px solid #e6e9ec;
                 left: -100%;
 
@@ -402,6 +413,13 @@ nav.navbar{
     #bannerGroup{
         #banner{
             height: 37vh;
+
+            .aboutme{
+                .text{
+                    letter-spacing: 1px;
+                    line-height: 40px;
+                }
+            }
 
             .lineGroup{
                 .top{
@@ -468,6 +486,14 @@ nav.navbar{
         #banner{
             height: 60vh;
             padding-top: 74px;
+
+            .aboutme{
+                padding: 0 15px;
+
+                p{
+                    padding-right: unset;
+                }
+            }
 
             .photo{
                 width: 314px;
@@ -674,7 +700,11 @@ nav.navbar{
         }
 
         p{
-            text-align: center;
+            width: 431px;
+            margin: auto;
+            text-align: justify;
+            line-height: 35px;
+            letter-spacing: 2px;
         }
 
         .QRcode{
@@ -778,6 +808,12 @@ nav.navbar{
                         padding: 0 25px;
                 }
             }
+
+            p{
+                width: 301px;
+                line-height: 35px;
+                letter-spacing: 2px;
+            }
         }
     }
 }
@@ -792,6 +828,13 @@ nav.navbar{
         .leaves{
             width: 140px;
             top: -7%;
+        }
+
+        .text{
+            p{
+                width: 270px;
+                letter-spacing: 1px;
+            }
         }
     }
 }
@@ -948,6 +991,9 @@ nav.navbar{
 
     p{
         color: $text_lightyellow;
+        width: 410px;
+        line-height: 35px;
+        letter-spacing: 2px;
     }
 
     .little-title{
@@ -1011,6 +1057,11 @@ nav.navbar{
 
         .myArticle {
             width: 140px;
+        }
+
+        p{
+            width: 265px;
+            letter-spacing: 1px;
         }
     }
 }
@@ -1284,7 +1335,7 @@ nav.navbar{
 
     //placeholder内文字改顔色
     ::-webkit-input-placeholder{
-        color:$text_lightyellow;
+        color:grey;
     }
     // End placeholder内文字改顔色
 
@@ -1367,8 +1418,8 @@ nav.navbar{
                 width: 140px;
                 padding: 10px;
                 border-radius: 10px;
-                background-color: $deep_green;
-                border: 1px solid $text_lightyellow;
+                background-color: #DB6C5A;
+                // border: 1px solid $text_lightyellow;
                 color: $text_lightyellow;
             }
     }

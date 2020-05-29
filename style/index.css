@@ -1152,8 +1152,8 @@ nav.navbar #header .nav-menu a:hover, nav.navbar #header .nav-menu .active > a, 
 
 #footer .leaves-l {
   position: absolute;
-  left: -2%;
-  top: 10%;
+  left: 0%;
+  top: 16%;
   width: 400px;
 }
 
@@ -1163,7 +1163,7 @@ nav.navbar #header .nav-menu a:hover, nav.navbar #header .nav-menu .active > a, 
 
 #footer .leaves-r {
   position: absolute;
-  right: -2%;
+  right: 0%;
   width: 400px;
 }
 
@@ -1243,7 +1243,7 @@ nav.navbar #header .nav-menu a:hover, nav.navbar #header .nav-menu .active > a, 
 
 @media (max-width: 768px) {
   #footer .leaves-l {
-    top: 20%;
+    top: 21%;
     width: 270px;
   }
   #footer .leaves-r {
@@ -1270,7 +1270,7 @@ nav.navbar #header .nav-menu a:hover, nav.navbar #header .nav-menu .active > a, 
 
 @media (max-width: 576px) {
   #footer .leaves-l {
-    top: 21%;
+    top: 26%;
     width: 155px;
   }
   #footer .leaves-r {
@@ -1316,7 +1316,7 @@ nav.navbar #header .nav-menu a:hover, nav.navbar #header .nav-menu .active > a, 
 
 @media (max-width: 320px) {
   #footer .leaves-l {
-    top: 27%;
+    top: 29%;
     width: 125px;
     -webkit-transform: rotate(-16deg);
             transform: rotate(-16deg);
